@@ -1,3 +1,3 @@
 FROM training/webapp
 
-ENTRYPOINT ["python", "app.py""]
+ENTRYPOINT ["python", "app.py"]
