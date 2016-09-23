@@ -7,8 +7,7 @@ then
 fi
 
 set -x
-if [ '$1' = 'local' ]
-then
+if [ "$1" == "local" ]; then
   docker_repo=diabol/event-based-cd-example:latest
 else
   docker_repo=944159926332.dkr.ecr.eu-west-1.amazonaws.com/event-based-cd-example:latest
