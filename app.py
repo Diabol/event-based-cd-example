@@ -13,9 +13,9 @@ def hello():
     #cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
     #reply = '<body background=\'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif\'>'
     reply = '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
-    reply += '<h2>Environment: **'+provider +'**</h2>'
-    reply += '<h2>Deployed at: ' + deployed_time + '</h2>'
-    reply += '<h2>Deployed revision: ' + deployed_revision + '</h2>'
+    reply += '<h4>Environment: **'+provider +'**</h4>'
+    reply += '<h4>Deployed at: ' + deployed_time + '</h4>'
+    reply += '<h4>Deployed revision: ' + deployed_revision + '</h4>'
     reply += '<image src=\'' + cat_url + '\' height=\'444\' width=\'560\'/>\n'
     #reply += '</body>'
     return reply
