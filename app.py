@@ -6,14 +6,15 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    provider = str(os.environ.get('PROVIDER', 'world'))
+    provider = str(os.environ.get('ENV', ''))
+    deployed_time = str(os.environ.get('DEPLOYED_TIME', ''))
     #cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
     cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
     #reply = '<body background=\'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif\'>'
-    reply = '<h1>!!!Deployed by the super cool Event Based CD system!!!</h1>\n'
-    reply += '<p>Environment: '+provider +'</p>'
+    reply = '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
+    reply += '<h2>Environment: '+provider +' deployed at ' + deployed_time + '</h2>'
     reply += '<image src=\'' + cat_url + '\' height=\'444\' width=\'560\'/>\n'
-    reply += '</body>'
+    #reply += '</body>'
     return reply
 
 if __name__ == '__main__':

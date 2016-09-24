@@ -14,4 +14,4 @@ else
 fi
 
 container_name=event-based-cd-example-$1
-docker run -d -p 8080:5000 --name ${container_name} -e PROVIDER=$1 ${docker_repo}
+docker run -d -p 8080:5000 --name ${container_name} -e ENV=$1 -e DEPLOYED_TIME=`date` ${docker_repo}
