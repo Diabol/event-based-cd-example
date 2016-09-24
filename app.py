@@ -8,11 +8,14 @@ app = Flask(__name__)
 def hello():
     provider = str(os.environ.get('ENV', ''))
     deployed_time = str(os.environ.get('DEPLOYED_TIME', ''))
-    cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
-    #cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
+    deployed_revision = str(os.environ.get('DEPLOYED_REVISION', ''))
+    #cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
+    cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
     #reply = '<body background=\'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif\'>'
     reply = '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
-    reply += '<h2>Environment: **'+provider +'** deployed at: ' + deployed_time + '</h2>'
+    reply += '<h2>Environment: **'+provider +'**</h2>'
+    reply += '<h2>Deployed at: ' + deployed_time + '</h2>'
+    reply += '<h2>Deployed revision: ' + deployed_revision + '</h2>'
     reply += '<image src=\'' + cat_url + '\' height=\'444\' width=\'560\'/>\n'
     #reply += '</body>'
     return reply
