@@ -12,12 +12,23 @@ def hello():
     cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
     #cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
     #reply = '<body background=\'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif\'>'
-    reply = '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
-    reply += '<h4>Environment: **'+provider +'**</h4>'
-    reply += '<h4>Deployed at: ' + deployed_time + '</h4>'
-    reply += '<h4>Deployed revision: ' + deployed_revision + '</h4>'
+
+    css = '''
+        * {
+         font-family: monospace;
+        }
+    '''
+
+    reply = '<head><style>'+css+'</style></head>'
+    reply += '<body>'
+    reply += '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
     reply += '<image src=\'' + cat_url + '\' height=\'444\' width=\'560\'/>\n'
-    #reply += '</body>'
+
+    reply += '<h3>Environment: **'+provider +'**</h3>'
+    reply += '<h3>Deployed at: **' + deployed_time + '**</h3>'
+    reply += '<h3>Deployed revision: **' + deployed_revision + '**</h3>'
+
+    reply += '</body>'
     return reply
 
 if __name__ == '__main__':
