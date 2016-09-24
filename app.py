@@ -9,8 +9,8 @@ def hello():
     provider = str(os.environ.get('ENV', ''))
     deployed_time = str(os.environ.get('DEPLOYED_TIME', ''))
     deployed_revision = str(os.environ.get('DEPLOYED_REVISION', ''))
-    #cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
-    cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
+    cat_url = 'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif'
+    #cat_url = 'https://github.com/Diabol/event-based-cd-example/blob/master/cat2.gif?raw=true'
     #reply = '<body background=\'http://2.bp.blogspot.com/-TwuKgh-bJO8/T9EfubfSyZI/AAAAAAAAC2I/FSaTSfqrXhk/s400/cat-playing-guitar-gif.gif\'>'
     reply = '<h1>!!!Deployed by the Super Cool Event Based CD System!!!</h1>\n'
     reply += '<h2>Environment: **'+provider +'**</h2>'
